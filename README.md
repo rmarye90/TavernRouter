@@ -1,93 +1,32 @@
-# Bot Discord - Liens Réseaux Sociaux
+# 🌟 Bot Discord - Liens Réseaux Sociaux (TavernRouter)
 
-Un bot Discord simple qui permet de partager les liens de vos différents réseaux sociaux via des commandes.
+Un bot Discord simple, élégant et intuitif conçu pour centraliser et partager facilement tous vos liens de réseaux sociaux avec votre communauté.
 
-## 🚀 Fonctionnalités
+Offrez à vos membres un moyen rapide d'accéder à l'ensemble de votre présence en ligne sans quitter Discord !
 
-- **Commandes slash** : `/liens` et `/lien <réseau>`
-- **Commandes avec préfixe** : `!liens`, `!instagram`, `!twitter`, etc.
-- **Embeds Discord** avec design attrayant
-- **Configuration facile** des liens dans `config.js`
+## 🚀 Pourquoi utiliser ce bot ?
 
-## 📋 Installation
-
-1. **Clonez le projet** ou téléchargez les fichiers
-2. **Installez les dépendances** :
-   ```bash
-   npm install
-   ```
-
-3. **Créez votre bot Discord** :
-   - Allez sur [Discord Developer Portal](https://discord.com/developers/applications)
-   - Créez une nouvelle application
-   - Allez dans la section "Bot"
-   - Créez un bot et copiez le token
-
-4. **Configurez le bot** :
-   - Ouvrez le fichier `.env`
-   - Remplacez `VOTRE_TOKEN_ICI` par le token de votre bot
-   - Modifiez les liens dans `config.js` avec vos vrais liens
-
-5. **Invitez le bot sur votre serveur** :
-   - Dans le Developer Portal, allez dans "OAuth2" > "URL Generator"
-   - Sélectionnez "bot" et "applications.commands"
-   - Sélectionnez les permissions nécessaires (Send Messages, Embed Links)
-   - Utilisez l'URL générée pour inviter le bot
-
-## ⚙️ Configuration
-
-Modifiez le fichier `config.js` pour personnaliser vos liens :
-
-```javascript
-const socialLinks = {
-    instagram: "https://www.instagram.com/votre_compte",
-    twitter: "https://twitter.com/votre_compte",
-    // ... autres liens
-};
-```
+- **Gain de temps** : Fini les copier-coller manuels de vos liens.
+- **Visibilité** : Mettez en avant tous vos réseaux sociaux grâce à des embeds Discord au design professionnel et attrayant.
+- **Simplicité** : Une expérience utilisateur fluide pour vous et vos membres.
+- **Flexibilité** : Fonctionne aussi bien avec les commandes Slash modernes qu'avec les commandes classiques par préfixe.
 
 ## 🎮 Utilisation
 
-### Commandes Slash
-- `/liens` : Affiche tous les liens de réseaux sociaux
-- `/lien <réseau>` : Affiche un lien spécifique
+L'interaction avec le bot est conçue pour être la plus naturelle possible.
 
-### Commandes avec Préfixe (!)
-- `!liens` : Affiche tous les liens
-- `!instagram` : Affiche le lien Instagram
-- `!twitter` : Affiche le lien Twitter
-- etc.
+### Vue d'ensemble
+- `/liens` ou `!liens` : Affiche une "carte de visite" complète regroupant tous vos réseaux sociaux.
 
-## 📱 Réseaux Supportés
+### Accès direct
+Besoin de partager un lien spécifique dans la conversation ? Appelez-le directement !
+- **Via commande Slash** : `/lien <réseau>` (ex: `/lien instagram`)
+- **Via préfixe classique** : `!instagram`, `!twitter`, `!twitch`, `!youtube`, etc.
 
-- Instagram
-- Twitter/X
-- Facebook
-- TikTok
-- YouTube
-- LinkedIn
-- Twitch
-- Discord
-- GitHub
-- Site Web
-- Blog
+## 📱 Plateformes et Réseaux Supportés
 
-## 🏃‍♂️ Démarrage
-
-```bash
-# Mode normal
-npm start
-
-# Mode développement (avec redémarrage automatique)
-npm run dev
-```
-
-## 🛠️ Technologies Utilisées
-
-- **Node.js**
-- **Discord.js v14**
-- **dotenv** pour la gestion des variables d'environnement
-
-## 📝 License
-
-MIT
+Le bot est pensé pour s'adapter à un maximum de plateformes :
+- **Réseaux Sociaux** : Instagram, Twitter/X, Facebook, TikTok
+- **Vidéo & Streaming** : YouTube, Twitch
+- **Pro & Développement** : LinkedIn, GitHub
+- **Autres** : Serveur Discord, Site Web personnel, Blog
