@@ -1,0 +1,30 @@
+{
+    "name": "discord-social-links-bot",
+    "version": "1.0.0",
+    "description": "Bot Discord pour partager des liens de réseaux sociaux",
+    "main": "index.ts",
+    "type": "module",
+    "engines": { "node": ">=24" },
+    "scripts": {
+        "start": "node index.ts",
+        "dev": "node index.ts",
+        "typecheck": "tsc --noEmit",
+        "invite": "node invite.ts"
+    },
+    "keywords": [
+        "discord",
+        "bot",
+        "social-media",
+        "links"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "discord.js": "^14.14.1",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "typescript": "^5.8.0"
+    }
+}
