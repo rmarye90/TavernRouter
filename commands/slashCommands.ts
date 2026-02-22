@@ -7,6 +7,7 @@ const PLATFORM_LABELS: Record<string, string> = {
   tiktok: "TikTok",
   youtube: "YouTube",
   twitch: "Twitch",
+  commu: "World of Warcraft",
 };
 
 type SlashCommandLike = SlashCommandBuilder | ReturnType<SlashCommandBuilder["addStringOption"]>;

@@ -12,6 +12,7 @@ export const socialLinks: SocialLinks = {
   tiktok: "https://www.tiktok.com/@skylissfr?_t=ZN-8ybH6IyHybu&_r=1",
   youtube: "https://youtube.com/@skylissfr?si=K-ejxNjj0R2SHOXF",
   twitch: "https://www.twitch.tv/skylissfr",
+  commu: "https://www.worldofwarcraft.com/invite/9ErWnvLTD7Z?region=EU&faction=Alliance"
 };
 
 export const socialMessages: SocialMessages = {
@@ -20,4 +21,5 @@ export const socialMessages: SocialMessages = {
   tiktok: "🎵 Découvrez nos vidéos sur TikTok !",
   youtube: "🎥 Abonnez-vous à notre chaîne YouTube !",
   twitch: "🎮 Suivez nos streams sur Twitch !",
+  commu: "🎮 Rejoignez notre communauté sur World of Warcraft !",
 };
