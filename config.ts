@@ -17,7 +17,7 @@ export const socialLinks: SocialLinks = {
 
 export const socialMessages: SocialMessages = {
   instagram: "📸 Suivez-nous sur Instagram !",
-  twitter: "🐦 Retrouvez-nous sur Twitter !",
+  twitter: "🐦 retrouver l’actu et des astuces chaque jour sur x !",
   tiktok: "🎵 Découvrez nos vidéos sur TikTok !",
   youtube: "🎥 Abonnez-vous à notre chaîne YouTube !",
   twitch: "🎮 Suivez nos streams sur Twitch !",
