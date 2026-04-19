@@ -6,6 +6,7 @@ const PLATFORM_LABELS: Record<string, string> = {
   twitter: "Twitter/X",
   tiktok: "TikTok",
   youtube: "YouTube",
+  youtubemusic: "YouTube Musique",
   twitch: "Twitch",
   commu: "World of Warcraft",
 };
