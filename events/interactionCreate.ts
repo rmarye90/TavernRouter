@@ -1,5 +1,5 @@
 import type { BaseInteraction } from "discord.js";
-import { socialLinks, socialMessages } from "../config.ts";
+import { loadSocialLinks, socialMessages } from "../config.ts";
 import { buildAllLinksEmbed, buildSingleLinkEmbed } from "../lib/embeds.ts";
 
 export async function handleInteractionCreate(
@@ -8,6 +8,8 @@ export async function handleInteractionCreate(
   if (!interaction.isChatInputCommand()) return;
 
   const { commandName } = interaction;
+
+  const socialLinks = loadSocialLinks();
 
   if (commandName === "liens") {
     const embed = buildAllLinksEmbed(socialLinks, socialMessages);

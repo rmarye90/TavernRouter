@@ -6,14 +6,22 @@ export interface SocialMessages {
   [platform: string]: string;
 }
 
-export const socialLinks: SocialLinks = {
-  instagram: "https://www.instagram.com/skylissfr/",
-  twitter: "https://x.com/skylissfr?s=21&t=qOePYrbWYQYSxn08ly1ZVg",
-  tiktok: "https://www.tiktok.com/@skylissfr?_t=ZN-8ybH6IyHybu&_r=1",
-  youtube: "https://youtube.com/@skylissfr?si=K-ejxNjj0R2SHOXF",
-  twitch: "https://www.twitch.tv/skylissfr",
-  commu: "https://www.worldofwarcraft.com/invite/9ErWnvLTD7Z?region=EU&faction=Alliance"
-};
+function requireEnv(key: string): string {
+  const value = process.env[key];
+  if (!value) throw new Error(`Missing environment variable: ${key}`);
+  return value;
+}
+
+export function loadSocialLinks(): SocialLinks {
+  const links: SocialLinks = {};
+  if (process.env.SOCIAL_INSTAGRAM) links.instagram = process.env.SOCIAL_INSTAGRAM;
+  if (process.env.SOCIAL_TWITTER) links.twitter = process.env.SOCIAL_TWITTER;
+  if (process.env.SOCIAL_TIKTOK) links.tiktok = process.env.SOCIAL_TIKTOK;
+  if (process.env.SOCIAL_YOUTUBE) links.youtube = process.env.SOCIAL_YOUTUBE;
+  if (process.env.SOCIAL_TWITCH) links.twitch = process.env.SOCIAL_TWITCH;
+  if (process.env.SOCIAL_COMMU) links.commu = process.env.SOCIAL_COMMU;
+  return links;
+}
 
 export const socialMessages: SocialMessages = {
   instagram: "📸 Suivez-nous sur Instagram !",

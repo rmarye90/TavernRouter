@@ -1,7 +1,7 @@
 import { REST, Routes, ActivityType } from "discord.js";
 import type { Client } from "discord.js";
 import { getSlashCommands } from "../commands/slashCommands.ts";
-import { socialLinks } from "../config.ts";
+import { loadSocialLinks } from "../config.ts";
 
 export async function handleReady(client: Client<true>): Promise<void> {
   console.log(`✅ Bot connecté en tant que ${client.user.tag}!`);
@@ -10,7 +10,7 @@ export async function handleReady(client: Client<true>): Promise<void> {
     const rest = new REST({ version: "10" }).setToken(
       process.env.DISCORD_TOKEN ?? ""
     );
-    const commands = getSlashCommands(socialLinks).map((c) => c.toJSON());
+    const commands = getSlashCommands(loadSocialLinks()).map((c) => c.toJSON());
 
     console.log("🔄 Actualisation des commandes slash...");
     await rest.put(Routes.applicationCommands(client.user.id), {

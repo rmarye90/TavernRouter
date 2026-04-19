@@ -13,11 +13,14 @@ export function buildAllLinksEmbed(
     .setColor(EMBED_COLOR as `#${string}`)
     .setTimestamp();
 
-  for (const [platform, url] of Object.entries(socialLinks)) {
+  for (const [platform, value] of Object.entries(socialLinks)) {
     const message = socialMessages[platform] ?? `Visitez notre ${platform}`;
+    const fieldValue = value.startsWith("http")
+      ? `[Cliquez ici](${value})`
+      : `\`${value}\``;
     embed.addFields({
       name: message,
-      value: `[Cliquez ici](${url})`,
+      value: fieldValue,
       inline: true,
     });
   }
@@ -30,11 +33,14 @@ export function buildSingleLinkEmbed(
   socialLinks: SocialLinks,
   socialMessages: SocialMessages
 ): EmbedBuilder {
-  const url = socialLinks[platform];
+  const value = socialLinks[platform];
   const message = socialMessages[platform] ?? `Visitez notre ${platform}`;
+  const description = value.startsWith("http")
+    ? `[Cliquez ici pour accéder à notre ${platform}](${value})`
+    : `Copie ce code dans le jeu :\n\`\`\`\n${value}\n\`\`\``;
   return new EmbedBuilder()
     .setTitle(message)
-    .setDescription(`[Cliquez ici pour accéder à notre ${platform}](${url})`)
+    .setDescription(description)
     .setColor(EMBED_COLOR as `#${string}`)
     .setTimestamp();
 }

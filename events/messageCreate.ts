@@ -1,5 +1,5 @@
 import type { Message } from "discord.js";
-import { socialLinks, socialMessages } from "../config.ts";
+import { loadSocialLinks, socialMessages } from "../config.ts";
 import { buildAllLinksEmbed, buildSingleLinkEmbed } from "../lib/embeds.ts";
 
 export async function handleMessageCreate(message: Message): Promise<void> {
@@ -10,6 +10,8 @@ export async function handleMessageCreate(message: Message): Promise<void> {
 
   const args = message.content.slice(prefix.length).trim().split(/\s+/);
   const command = args.shift()?.toLowerCase() ?? "";
+
+  const socialLinks = loadSocialLinks();
 
   if (command === "liens" || command === "reseaux") {
     const embed = buildAllLinksEmbed(socialLinks, socialMessages);
